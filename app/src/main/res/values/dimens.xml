@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="size_album_thumbnail">48dp</dimen>
+    <dimen name="height_details_image">260dp</dimen>
+    <dimen name="margin_player">8dp</dimen>
+    <dimen name="padding_list">8dp</dimen>
+    <dimen name="padding_image">8dp</dimen>
+    <dimen name="padding_song_details_small">4dp</dimen>
+    <dimen name="padding_song_details">8dp</dimen>
+
+    <dimen name="text_size_list_title">16sp</dimen>
+    <dimen name="text_size_list_sub_title">14sp</dimen>
+    <dimen name="text_size_details_title">18sp</dimen>
+    <dimen name="text_size_details_sub_title">14sp</dimen>
+
+</resources>

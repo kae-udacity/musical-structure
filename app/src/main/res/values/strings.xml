@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Musical Structure</string>
+    <string name="album_image">album image</string>
+    <string name="previous_song">previous song</string>
+    <string name="play_song">play song</string>
+    <string name="next_song">next song</string>
+</resources>

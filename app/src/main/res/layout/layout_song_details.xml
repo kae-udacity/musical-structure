@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_weight="1"
+    tools:showIn="@layout/activity_song_details">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/album_image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_details_image"
+                android:contentDescription="@string/album_image"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/song_title"
+                style="@style/SongDetails"
+                android:paddingLeft="@dimen/padding_song_details"
+                android:paddingStart="@dimen/padding_song_details"
+                android:paddingTop="@dimen/padding_song_details"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/artist_name"
+                style="@style/SongDetails"
+                android:paddingLeft="@dimen/padding_song_details"
+                android:paddingStart="@dimen/padding_song_details"
+                android:paddingTop="@dimen/padding_song_details_small"/>
+        </LinearLayout>
+    </ScrollView>
+</layout>
