@@ -13,13 +13,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.android.musicalstructure.R;
-import com.example.android.musicalstructure.SongDetailsActivity;
+import com.example.android.musicalstructure.NowPlayingActivity;
 import com.example.android.musicalstructure.data.Song;
 
 import java.util.ArrayList;
 
 /**
- * Handles the list of songs to be displayed in a {@link SongDetailsActivity}.
+ * Handles the list of songs to be displayed in a {@link NowPlayingActivity}.
  */
 
 public class SongAdapter extends ArrayAdapter<Song> {
@@ -52,7 +52,7 @@ public class SongAdapter extends ArrayAdapter<Song> {
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getContext(), SongDetailsActivity.class);
+                Intent intent = new Intent(getContext(), NowPlayingActivity.class);
                 intent.putExtra("song", song);
                 getContext().startActivity(intent);
             }

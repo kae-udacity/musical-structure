@@ -6,7 +6,7 @@
     android:layout_marginBottom="@dimen/margin_player"
     android:layout_marginTop="@dimen/margin_player"
     android:orientation="horizontal"
-    tools:showIn="@layout/activity_song_details">
+    tools:showIn="@layout/activity_now_playing">
 
     <ImageView
         android:layout_width="0dp"

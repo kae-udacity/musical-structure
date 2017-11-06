@@ -1,19 +1,21 @@
 package com.example.android.musicalstructure;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.android.musicalstructure.data.Song;
-import com.example.android.musicalstructure.databinding.ActivitySongDetailsBinding;
+import com.example.android.musicalstructure.databinding.ActivityNowPlayingBinding;
 
-public class SongDetailsActivity extends AppCompatActivity {
+public class NowPlayingActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivitySongDetailsBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_song_details);
+        ActivityNowPlayingBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_now_playing);
 
         Song song = getIntent().getParcelableExtra("song");
 
@@ -25,5 +27,14 @@ public class SongDetailsActivity extends AppCompatActivity {
 
         binding.songDetails.songTitle.setText(song.getName());
         binding.songDetails.artistName.setText(song.getArtist());
+
+        binding.playlist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(NowPlayingActivity.this, PlaylistActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
     }
 }

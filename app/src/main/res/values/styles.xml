@@ -14,4 +14,12 @@
         <item name="android:textSize">@dimen/text_size_details_sub_title</item>
     </style>
 
+    <style name="ButtonStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/text_size_button</item>
+    </style>
+
 </resources>

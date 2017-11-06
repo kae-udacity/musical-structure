@@ -3,10 +3,12 @@ package com.example.android.musicalstructure.data;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.example.android.musicalstructure.NowPlayingActivity;
+
 /**
  * Stores the data for a Song object i.e. the name, artist and album art of the song.
  * Implements parcelable to allow it to be stored in the intent when a
- * {@link com.example.android.musicalstructure.SongDetailsActivity} is started.
+ * {@link NowPlayingActivity} is started.
  */
 public class Song implements Parcelable {
 

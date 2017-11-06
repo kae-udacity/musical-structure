@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_weight="1"
-    tools:showIn="@layout/activity_song_details">
+    tools:showIn="@layout/activity_now_playing">
 
     <ScrollView
         android:layout_width="match_parent"

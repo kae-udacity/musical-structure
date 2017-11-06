@@ -1,21 +1,24 @@
 package com.example.android.musicalstructure;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.android.musicalstructure.adapter.SongAdapter;
 import com.example.android.musicalstructure.data.Song;
-import com.example.android.musicalstructure.databinding.ActivityMainBinding;
+import com.example.android.musicalstructure.databinding.ActivityPlaylistBinding;
 
 import java.util.ArrayList;
+import java.util.Random;
 
-public class MainActivity extends AppCompatActivity {
+public class PlaylistActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        ActivityPlaylistBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_playlist);
         final ArrayList<Song> songs = new ArrayList<>();
 
         songs.add(new Song ("Tainted Love", "Soft Cell", R.drawable.soft_cell));
@@ -29,5 +32,16 @@ public class MainActivity extends AppCompatActivity {
 
         SongAdapter adapter = new SongAdapter(this, songs);
         binding.list.setAdapter(adapter);
+
+        binding.nowPlaying.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int index = new Random().nextInt(songs.size());
+                Song song = songs.get(index);
+                Intent intent = new Intent(PlaylistActivity.this, NowPlayingActivity.class);
+                intent.putExtra("song", song);
+                startActivity(intent);
+            }
+        });
     }
 }
