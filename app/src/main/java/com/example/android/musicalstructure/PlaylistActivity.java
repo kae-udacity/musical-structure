@@ -21,14 +21,14 @@ public class PlaylistActivity extends AppCompatActivity {
         ActivityPlaylistBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_playlist);
         final ArrayList<Song> songs = new ArrayList<>();
 
-        songs.add(new Song ("Tainted Love", "Soft Cell", R.drawable.soft_cell));
-        songs.add(new Song ("Everybody wants to rule the world", "Tears for Fears", R.drawable.tears_for_fears));
-        songs.add(new Song ("Vienna", "Ultravox", R.drawable.ultravox));
-        songs.add(new Song ("Slip Away", "Perfume Genius", R.drawable.perfume_genius));
-        songs.add(new Song ("Cherry", "Chromatics", R.drawable.chromatics));
-        songs.add(new Song ("Best to You", "Blood Orange", R.drawable.blood_orange));
-        songs.add(new Song ("Bruises", "Chairlift", R.drawable.chairlift));
-        songs.add(new Song ("Rill Rill", "Sleigh Bells", R.drawable.sleigh_bells));
+        songs.add(new Song (getString(R.string.tainted_love), getString(R.string.soft_cell), R.drawable.music_note_thumbnail));
+        songs.add(new Song (getString(R.string.everybody_wants_to_rule_the_world), getString(R.string.tears_for_fears), R.drawable.music_note_thumbnail));
+        songs.add(new Song (getString(R.string.vienna), getString(R.string.ultravox), R.drawable.music_note_thumbnail));
+        songs.add(new Song (getString(R.string.slip_away), getString(R.string.perfume_genius), R.drawable.music_note_thumbnail));
+        songs.add(new Song (getString(R.string.cherry), getString(R.string.chromatics), R.drawable.music_note_thumbnail));
+        songs.add(new Song (getString(R.string.best_to_you), getString(R.string.blood_orange), R.drawable.music_note_thumbnail));
+        songs.add(new Song (getString(R.string.bruises), getString(R.string.chairlift), R.drawable.music_note_thumbnail));
+        songs.add(new Song (getString(R.string.rill_rill), getString(R.string.sleigh_bells), R.drawable.music_note_thumbnail));
 
         SongAdapter adapter = new SongAdapter(this, songs);
         binding.list.setAdapter(adapter);
@@ -39,7 +39,7 @@ public class PlaylistActivity extends AppCompatActivity {
                 int index = new Random().nextInt(songs.size());
                 Song song = songs.get(index);
                 Intent intent = new Intent(PlaylistActivity.this, NowPlayingActivity.class);
-                intent.putExtra("song", song);
+                intent.putExtra(getString(R.string.song), song);
                 startActivity(intent);
             }
         });

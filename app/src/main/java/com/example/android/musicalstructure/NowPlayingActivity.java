@@ -17,7 +17,7 @@ public class NowPlayingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         ActivityNowPlayingBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_now_playing);
 
-        Song song = getIntent().getParcelableExtra("song");
+        Song song = getIntent().getParcelableExtra(getString(R.string.song));
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             binding.songDetails.albumImage.setImageDrawable(getResources().getDrawable(song.getAlbumImageId(), getTheme()));

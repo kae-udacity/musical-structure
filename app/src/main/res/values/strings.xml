@@ -6,4 +6,21 @@
     <string name="next_song">next song</string>
     <string name="now_playing">Now Playing</string>
     <string name="playlist">Playlist</string>
+    <string name="tainted_love">Tainted Love</string>
+    <string name="soft_cell">Soft Cell</string>
+    <string name="tears_for_fears">Tears for Fears</string>
+    <string name="everybody_wants_to_rule_the_world">Everybody wants to rule the world</string>
+    <string name="vienna">Vienna</string>
+    <string name="ultravox">Ultravox</string>
+    <string name="slip_away">Slip Away</string>
+    <string name="perfume_genius">Perfume Genius</string>
+    <string name="cherry">Cherry</string>
+    <string name="chromatics">Chromatics</string>
+    <string name="blood_orange">Blood Orange</string>
+    <string name="best_to_you">Best to You</string>
+    <string name="chairlift">Chairlift</string>
+    <string name="bruises">Bruises</string>
+    <string name="sleigh_bells">Sleigh Bells</string>
+    <string name="rill_rill">Rill Rill</string>
+    <string name="song">song</string>
 </resources>
