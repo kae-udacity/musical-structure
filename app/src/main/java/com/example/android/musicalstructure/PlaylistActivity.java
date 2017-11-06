@@ -21,14 +21,14 @@ public class PlaylistActivity extends AppCompatActivity {
         ActivityPlaylistBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_playlist);
         final ArrayList<Song> songs = new ArrayList<>();
 
-        songs.add(new Song (getString(R.string.tainted_love), getString(R.string.soft_cell), R.drawable.music_note_thumbnail));
-        songs.add(new Song (getString(R.string.everybody_wants_to_rule_the_world), getString(R.string.tears_for_fears), R.drawable.music_note_thumbnail));
-        songs.add(new Song (getString(R.string.vienna), getString(R.string.ultravox), R.drawable.music_note_thumbnail));
-        songs.add(new Song (getString(R.string.slip_away), getString(R.string.perfume_genius), R.drawable.music_note_thumbnail));
-        songs.add(new Song (getString(R.string.cherry), getString(R.string.chromatics), R.drawable.music_note_thumbnail));
-        songs.add(new Song (getString(R.string.best_to_you), getString(R.string.blood_orange), R.drawable.music_note_thumbnail));
-        songs.add(new Song (getString(R.string.bruises), getString(R.string.chairlift), R.drawable.music_note_thumbnail));
-        songs.add(new Song (getString(R.string.rill_rill), getString(R.string.sleigh_bells), R.drawable.music_note_thumbnail));
+        songs.add(new Song (getString(R.string.tainted_love), getString(R.string.soft_cell), R.drawable.music_note));
+        songs.add(new Song (getString(R.string.everybody_wants_to_rule_the_world), getString(R.string.tears_for_fears), R.drawable.music_note));
+        songs.add(new Song (getString(R.string.vienna), getString(R.string.ultravox), R.drawable.music_note));
+        songs.add(new Song (getString(R.string.slip_away), getString(R.string.perfume_genius), R.drawable.music_note));
+        songs.add(new Song (getString(R.string.cherry), getString(R.string.chromatics), R.drawable.music_note));
+        songs.add(new Song (getString(R.string.best_to_you), getString(R.string.blood_orange), R.drawable.music_note));
+        songs.add(new Song (getString(R.string.bruises), getString(R.string.chairlift), R.drawable.music_note));
+        songs.add(new Song (getString(R.string.rill_rill), getString(R.string.sleigh_bells), R.drawable.music_note));
 
         SongAdapter adapter = new SongAdapter(this, songs);
         binding.list.setAdapter(adapter);
